@@ -1,0 +1,8 @@
+<% @generic_file.dimensions.each do |dim| %>
+	<% present_terms(@presenter,[:width, :height, :depth]) do |r, term| %>
+	 <span itemscope itemtype="http://schema.org/Thing">
+	    <span itemprop="width"><%= r.label(term) %>: <%= dim[term] %></span>
+	 </span>
+  	<br />
+  	<%  end %>
+<% end %>

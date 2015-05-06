@@ -1,0 +1,8 @@
+<% @generic_file.dimensions.each do |dimension| %>
+	<%= f.simple_fields_for :dimensions do |builder| %>
+		<% builder.object = dimension %>
+		<%= render_edit_field_partial(:height, f: builder) %>
+		<%= render_edit_field_partial(:width, f: builder) %>
+		<%= render_edit_field_partial(:depth, f: builder) %>
+	<% end %>
+<% end %>
